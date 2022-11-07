@@ -1,0 +1,30 @@
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  kafka:
+    bootstrap-servers:
+      - localhost:9092
+    consumer:
+      group-id: spring
+
+clients:
+  web-user:
+    base-url: https://reqres.in
+
+keycloak:
+  realm: my-realm
+  auth-server-url: http://localhost:8081/
+  ssl-required: external
+  resource: testing-spring-boot
+  credentials:
+    secret: "NKjuTZDEaaqvAPkctJxjt1I4kBvhJ4gQ"
+  use-resource-role-mappings: true
+  bearer-only: true
+

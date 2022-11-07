@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:12.9-alpine:///spring_boot_testcontainers
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  test:
+    database:
+      replace: none

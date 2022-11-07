@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:12.9-alpine:///spring_boot_testcontainers
+  test:
+    database:
+      replace: none
+
+clients:
+  web-user:
+    base-url: placeholder
